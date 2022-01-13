@@ -1,0 +1,23 @@
+{
+  "name": "ts-back-to-top-component",
+  "version": "1.0.0",
+  "description": "Demo of a Web component using TypeScript.",
+  "main": "index.js",
+  "scripts": {
+    "SERVE": "live-server --open=./dist --port=8000",
+    "WATCH": "npm-run-all --parallel watch:ts watch:js",
+    "watch:ts": "tsc --watch",
+    "watch:js": "rollup --config --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdelarubia/ts-back-to-top-component.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdelarubia/ts-back-to-top-component/issues"
+  },
+  "homepage": "https://github.com/jdelarubia/ts-back-to-top-component#readme"
+}
