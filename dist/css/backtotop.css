@@ -1,0 +1,45 @@
+/**
+* backtotop.css
+* backtotop component styles
+*/
+
+:root {
+  --camel: #9c6d01;
+  --light-blue: #15395e;
+  --aqua: #007c88;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  height: 40px;
+  width: 40px;
+
+  aspect-ratio: 1;
+  background: var(--aqua);
+  border-radius: 5px;
+  box-shadow: -5px 5px 10px 2px var(--camel);
+}
+.back-to-top:before {
+  content: "";
+  position: absolute;
+  inset: 25%;
+  transform: translateY(30%) rotate(-45deg);
+  border-top: 7px solid #fff;
+  border-right: 7px solid #fff;
+}
+
+.back-to-top:hover {
+  animation: scale 2s ease 0s 1 normal forwards;
+  animation-name: scale;
+}
+@keyframes scale {
+  0% {
+    box-shadow: -5px 5px 10px 2px var(--camel);
+    transform: scale(1);
+  }
+  100% {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    transform: scale(1.3);
+  }
+}
