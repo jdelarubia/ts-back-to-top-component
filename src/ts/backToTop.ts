@@ -6,18 +6,22 @@
 const buttonCss = `<style>@import "./css/backtotop.css";</style>`;
 
 const template = document.createElement("template");
-template.innerHTML = buttonCss + `<a href="#" class="back-to-top"></a>`;
+template.innerHTML = buttonCss + `<a href="" class="back-to-top"></a>`;
 
 class BackToTop extends HTMLElement {
   private shadow: ShadowRoot;
+  private targetId: string;
 
-  constructor() {
+  constructor(targetId: string = "top") {
     super();
     this.shadow = this.attachShadow({ mode: "open" });
+    this.targetId = `#${targetId}`;
   } //.
 
   connectedCallback() {
     this.shadow.appendChild(template.content.cloneNode(true));
+    const a = <HTMLAnchorElement>this.shadow.querySelector("a");
+    a.href = this.targetId;
   }
 } //. BackToTop
 
