@@ -3,6 +3,13 @@
  * BackToTop button component.
  */
 
+
+document.addEventListener("scroll", (ev: Event) => {
+  let showing: boolean = (window.scrollY > window.innerHeight)?true:false;
+  const ToggleEvent = new CustomEvent("toggleButton",{ detail: { showing: showing });
+  document.dispatchEvent(ToggleEvent );
+});
+
 const buttonCss = `<style>@import "./css/backtotop.css";</style>`;
 
 const template = document.createElement("template");
@@ -22,6 +29,11 @@ class BackToTop extends HTMLElement {
     this.shadow.appendChild(template.content.cloneNode(true));
     const a = <HTMLAnchorElement>this.shadow.querySelector("a");
     a.href = this.targetId;
+
+    document.addEventListener("toggleButton", (ev: Event) => {
+      const detail = (ev as CustomEvent).detail;
+      a.classList.toggle("show", detail.showing);
+    });
   }
 } //. BackToTop
 
