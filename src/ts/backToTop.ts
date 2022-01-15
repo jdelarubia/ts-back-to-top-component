@@ -3,11 +3,12 @@
  * BackToTop button component.
  */
 
-
 document.addEventListener("scroll", (ev: Event) => {
-  let showing: boolean = (window.scrollY > window.innerHeight)?true:false;
-  const ToggleEvent = new CustomEvent("toggleButton",{ detail: { showing: showing });
-  document.dispatchEvent(ToggleEvent );
+  let showing: boolean = window.scrollY > window.innerHeight ? true : false;
+  const ToggleEvent = new CustomEvent("toggleButton", {
+    detail: { showing: showing },
+  });
+  document.dispatchEvent(ToggleEvent);
 });
 
 const buttonCss = `<style>@import "./css/backtotop.css";</style>`;
