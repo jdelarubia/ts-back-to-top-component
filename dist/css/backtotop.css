@@ -12,6 +12,7 @@
 }
 .back-to-top {
   position: fixed;
+  visibility: hidden;
   bottom: var(--btt-margin);
   right: var(--btt-margin);
   height: var(--btt-thumb-size);
@@ -21,6 +22,9 @@
   background: var(--aqua);
   border-radius: 0.8rem;
   box-shadow: -5px 5px 10px 2px var(--camel);
+}
+.back-to-top.show {
+  visibility: visible;
 }
 .back-to-top:before {
   content: "";
