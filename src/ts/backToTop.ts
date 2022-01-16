@@ -32,8 +32,7 @@ class BackToTop extends HTMLElement {
     a.href = this.targetId;
 
     document.addEventListener("toggleButton", (ev: Event) => {
-      const detail = (ev as CustomEvent).detail;
-      a.classList.toggle("show", detail.showing);
+      a.classList.toggle("show", (ev as CustomEvent).detail.showing);
     });
   }
 } //. BackToTop
