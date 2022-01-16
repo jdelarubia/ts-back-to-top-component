@@ -10,6 +10,11 @@
   --btt-thumb-size: 4rem;
   --btt-margin: 1rem;
 }
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  background-color: grey;
+}
 .back-to-top {
   position: fixed;
   bottom: var(--btt-margin);
@@ -24,10 +29,10 @@
 }
 .back-to-top.show {
   visibility: visible;
-  animation: fadeIn 2s ease 0s 1 normal forwards;
+  animation: fadeIn 1s ease 0s 1 normal forwards;
 }
 .back-to-top:not(.show) {
-  animation: fadeOut 2s ease 0s 1 normal forwards;
+  animation: fadeOut 1s ease 0s 1 normal forwards;
 }
 .back-to-top:before {
   content: "";
@@ -38,7 +43,7 @@
   border-right: 10px solid #fff;
 }
 .back-to-top:hover {
-  animation: shake 2s ease 0s 1 normal forwards;
+  animation: shake 1s ease 0s 1 normal forwards;
   animation-name: shake;
 }
 @keyframes shake {
@@ -47,16 +52,16 @@
     transform: translateX(0);
   }
   20% {
-    transform: translateY(-10px);
+    transform: translateY(-4px);
   }
   40% {
-    transform: translateY(8px);
+    transform: translateY(4px);
   }
   60% {
-    transform: translateY(6px);
+    transform: translateY(-8px);
   }
   80% {
-    transform: translateY(-4px);
+    transform: translateY(2px);
   }
 }
 @keyframes fadeIn {
