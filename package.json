@@ -3,18 +3,20 @@
   "version": "1.0.0",
   "description": "Demo of a Web component using TypeScript.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "SERVE": "live-server --open=./dist --port=8000",
+    "SERVE": "live-server --mount=/:./dist --port=5500",
     "WATCH": "npm-run-all --parallel watch:ts watch:js",
     "watch:ts": "tsc --watch",
-    "watch:js": "rollup --config --watch"
+    "watch:js": "rollup --config --watch",
+    "bundle:js": "rollup --config"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jdelarubia/ts-back-to-top-component.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "jdelarubia",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jdelarubia/ts-back-to-top-component/issues"
