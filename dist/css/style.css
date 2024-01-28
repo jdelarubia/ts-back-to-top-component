@@ -1,11 +1,25 @@
-@import "./backtotop.css";
+@import './back-to-top.css';
+@import './fancy-text-block.css';
+
+:root {
+  --light-blue: #15395e;
+  --aqua: #007c88;
+  --btt-thumb-size: 4rem;
+  --btt-margin: 1rem;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  background-color: grey;
+}
 
 body {
   display: grid;
   grid-template-columns: auto auto;
+  width: 100%;
 }
+
 p {
   font-size: 25px;
 }
-
-
