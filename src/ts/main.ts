@@ -1,4 +1,5 @@
 import { BackToTop } from './back-to-top'
+import { FancyTextBlock } from './fancy-text-block'
 
 new BackToTop()
-body?.appendChild(new BackToTop());
+new FancyTextBlock()
