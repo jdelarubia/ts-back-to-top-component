@@ -1,0 +1,53 @@
+/**
+* back-to-top.css
+* backtotop component styles
+*/
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: var(--btt-margin);
+  right: var(--btt-margin);
+  height: var(--btt-thumb-size);
+  width: var(--btt-thumb-size);
+
+  aspect-ratio: 1;
+  background: var(--aqua);
+  border-radius: 0.8rem;
+  color: transparent;
+}
+
+.back-to-top.show {
+  visibility: visible;
+  animation: fadeInAnimation 1s ease 0s 1 normal forwards;
+}
+
+.back-to-top:not(.show) {
+  animation: fadeOutAnimation 1s ease 0s 1 normal forwards;
+}
+
+.back-to-top:before {
+  content: '';
+  position: absolute;
+  inset: 25%;
+  transform: translateY(30%) rotate(-45deg);
+  border-top: 10px solid #fff;
+  border-right: 10px solid #fff;
+}
