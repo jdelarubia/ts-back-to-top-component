@@ -1,4 +1,4 @@
-import { BackToTop } from "./backToTop";
+import { BackToTop } from './back-to-top'
 
-const body = <HTMLElement>document.querySelector("body");
+new BackToTop()
 body?.appendChild(new BackToTop());
