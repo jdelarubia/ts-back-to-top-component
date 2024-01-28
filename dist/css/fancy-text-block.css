@@ -1,0 +1,10 @@
+fancy-text-block p {
+  border-width: thin;
+  border-color: white;
+  border-style: solid;
+  padding: 1em;
+}
+
+fancy-text-block ul {
+  font-size: 0.8em;
+}
