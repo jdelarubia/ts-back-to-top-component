@@ -1,5 +1,5 @@
-import { BackToTop } from './back-to-top'
+import { BackToTopBtn } from './back-to-top-btn'
 import { FancyTextBlock } from './fancy-text-block'
 
-new BackToTop()
+new BackToTopBtn()
 new FancyTextBlock()
