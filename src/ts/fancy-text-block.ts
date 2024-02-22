@@ -7,7 +7,7 @@
 class FancyTextBlock extends HTMLElement {
   // private shadow: ShadowRoot
   private currentColorIndex = 0
-  private availableColors = ['red', 'blue', 'green', 'yellow', 'black']
+  private availableColors = ['red', 'blue', 'green', 'yellow', 'purple', 'black']
 
   constructor() {
     super()
