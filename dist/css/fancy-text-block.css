@@ -2,7 +2,8 @@ fancy-text-block p {
   border-width: thin;
   border-color: white;
   border-style: solid;
-  padding: 1em;
+  padding: 0.5em;
+  text-align: justify;
 }
 
 fancy-text-block ul {
