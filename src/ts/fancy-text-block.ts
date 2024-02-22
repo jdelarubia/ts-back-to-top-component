@@ -1,6 +1,7 @@
 /**
  * fancy-text-block.ts
  * <fancy-text-block> paragraph component.
+ * Very simple component that cycles through a list of predefined colors when clicked-on.
  */
 
 class FancyTextBlock extends HTMLElement {
