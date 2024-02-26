@@ -4,8 +4,8 @@
 :root {
   --light-blue: #15395e;
   --aqua: #007c88;
-  --btt-thumb-size: 4rem;
-  --btt-margin: 1rem;
+  --btn-thumb-size: 4rem;
+  --btn-margin: 1rem;
 }
 
 html {
