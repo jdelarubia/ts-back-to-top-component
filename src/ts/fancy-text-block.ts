@@ -6,7 +6,7 @@
  * window.customElements.define('fancy-text-block', FancyTextBlock)
  */
 
-class FancyTextBlock extends HTMLElement {
+export class FancyTextBlock extends HTMLElement {
   private currentColorIndex = 0
   private availableColors = ['red', 'blue', 'green', 'yellow', 'purple', 'black']
 
@@ -27,7 +27,3 @@ class FancyTextBlock extends HTMLElement {
     })
   }
 } //. FancyTextBlock
-
-window.customElements.define('fancy-text-block', FancyTextBlock)
-
-export { FancyTextBlock }
