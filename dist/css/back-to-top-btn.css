@@ -1,6 +1,9 @@
 /**
 * back-to-top.css
-* backtotop component styles
+ * back-to-top component styles
+ * requires the following properties defined in main style.css
+ * --btn-margin
+ * --btn-thumb-size
 */
 
 @keyframes fadeInAnimation {
