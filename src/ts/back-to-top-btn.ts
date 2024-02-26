@@ -1,6 +1,8 @@
 /**
  * back-to-top-btn.ts
  * <back-to-top-btn> button component.
+ * define component in main:
+ * window.customElements.define('back-to-top-btn', BackToTopBtn)
  */
 
 document.addEventListener('scroll', (ev: Event) => {
