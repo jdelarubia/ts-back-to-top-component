@@ -2,6 +2,8 @@
  * fancy-text-block.ts
  * <fancy-text-block> paragraph component.
  * Very simple component that cycles through a list of predefined colors when clicked-on.
+ * requires defining component in main:
+ * window.customElements.define('fancy-text-block', FancyTextBlock)
  */
 
 class FancyTextBlock extends HTMLElement {
