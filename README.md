@@ -10,3 +10,4 @@ Demo of a Web component using TypeScript.
 - [JavaScript IntersectionObserver API in detail](https://usefulangle.com/post/118/javascript-intersection-observer)
 - [SVG Optimizer by Jake Archibald](https://svgomg.net/)
 - [WC Bullet Chain](https://github.com/vanillawc/wc-bullet-chain/blob/main/src/wc-bullet-chain.js)
+- [Github's WC auto-complete-element example](https://github.com/github/github-elements)
