@@ -6,17 +6,11 @@
  * --btn-thumb-size
  */
 
-:root {
-  --instagram-btn-color: #9c6d01;
-  --instagram-btn-background: white;
-}
-
 .instagram-btn {
   position: fixed;
   aspect-ratio: 1;
   height: var(--btn-thumb-size);
   width: var(--btn-thumb-size);
-  color: transparent;
 }
 a.instagram-btn.bottom {
   bottom: var(--btn-margin);
