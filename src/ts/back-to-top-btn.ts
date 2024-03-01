@@ -29,7 +29,7 @@ export class BackToTopBtn extends HTMLElement {
   static BACKGROUND = '#fff'
   static OPACITY = 0.8
 
-  constructor(targetId: string = BackToTopBtn._defaultTag()) {
+  constructor(targetId: string = BackToTopBtn.TAG) {
     super()
     this.targetId = `#${targetId}`
     this.template = document.createElement('template')
@@ -40,7 +40,7 @@ export class BackToTopBtn extends HTMLElement {
     this.appendChild(this.template.content.cloneNode(true))
     const a = <HTMLAnchorElement>this.querySelector('a')
     const tag = this.getAttribute('tag')
-    a.href = tag ? `#${tag}` : this.targetId ? this.targetId : BackToTopBtn._defaultTag()
+    a.href = tag ? `#${tag}` : this.targetId ? this.targetId : BackToTopBtn.TAG
 
     document.addEventListener('toggleBackToTopButton', (ev: Event) => {
       a.classList.toggle('show', (ev as CustomEvent).detail.showing)
