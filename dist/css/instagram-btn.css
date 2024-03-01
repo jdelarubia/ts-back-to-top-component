@@ -34,7 +34,7 @@ a.instagram-btn.bottom {
   bottom: var(--btn-margin);
 }
 a.instagram-btn.top {
-  top: var(--btn-main);
+  top: var(--btn-margin);
 }
 a.instagram-btn.left {
   left: var(--btn-margin);
