@@ -68,6 +68,16 @@ export class BackToTopBtn extends HTMLElement {
     return positionCss.join(' ')
   }
   
+  _getComponentColors(): Array<string> {
+    /**
+     * Return an array of color & background-color or its default values.
+     */
+
+    const color = this.getAttribute('color')
+    const background = this.getAttribute('background')
+    return [color ? color : BackToTopBtn.COLOR, background ? background : BackToTopBtn.BACKGROUND]
+  }
+  _getComponentOpacity(): string {
 
   _template(targetId: string) {
     const svg = `<svg width="26" height="26" viewBox="0 0 6.879 6.879" xmlns="http://www.w3.org/2000/svg">
