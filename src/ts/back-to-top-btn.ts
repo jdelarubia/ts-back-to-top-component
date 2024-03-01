@@ -16,6 +16,11 @@ document.addEventListener('scroll', (ev: Event) => {
 export class BackToTopBtn extends HTMLElement {
   private targetId: string
   private template
+  // defaults
+  static TAG = 'top'
+  static COLOR = '#9c6d01'
+  static BACKGROUND = '#fff'
+  static OPACITY = 0.8
 
   constructor(targetId: string = BackToTopBtn._defaultTag()) {
     super()
