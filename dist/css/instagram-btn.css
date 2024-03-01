@@ -47,14 +47,7 @@ a.instagram-btn.right {
   height: var(--btn-thumb-size);
   width: var(--btn-thumb-size);
 }
-.instagram-btn path {
-  stroke: var(--instagram-btn-color);
-  fill: var(--instagram-btn-background);
-}
-.instagram-btn circle {
-  stroke: var(--instagram-btn-color);
-  fill: var(--instagram-btn-color);
-}
+
 .instagram-btn:hover {
   transform: scale(1.2);
   transition: transform 0.2s;
