@@ -1,15 +1,10 @@
 /**
- * back-to-top.css
- * back-to-top component styles
+ * back-to-top-btn.css
+ * back-to-top-btn component styles
  * requires the following properties defined in main style.css
  * --btn-margin
  * --btn-thumb-size
  */
-
-:root {
-  --back-to-top-btn-color: #9c6d01;
-  --back-to-top-btn-background: white;
-}
 
 @keyframes fadeInAnimation {
   0% {
@@ -29,39 +24,45 @@
   }
 }
 
-.back-to-top {
+.back-to-top-btn {
   position: fixed;
-  bottom: var(--btn-margin);
-  right: var(--btn-margin);
-  height: var(--btn-thumb-size);
-  width: var(--btn-thumb-size);
   aspect-ratio: 1;
-  color: transparent;
-}
-.back-to-top svg {
   height: var(--btn-thumb-size);
   width: var(--btn-thumb-size);
 }
-.back-to-top path {
-  stroke: var(--back-to-top-btn-color);
-  fill: var(--back-to-top-btn-background);
+a.back-to-top-btn.bottom {
+  bottom: var(--btn-margin);
+}
+a.back-to-top-btn.top {
+  top: var(--btn-main);
+}
+a.back-to-top-btn.left {
+  left: var(--btn-margin);
+}
+a.back-to-top-btn.right {
+  right: var(--btn-margin);
 }
 
-.back-to-top.show {
+.back-to-top-btn svg {
+  height: var(--btn-thumb-size);
+  width: var(--btn-thumb-size);
+}
+
+.back-to-top-btn.show {
   visibility: visible;
   animation: fadeInAnimation 1s ease 0s 1 normal forwards;
 }
 
-.back-to-top.show:hover {
+.back-to-top-btn.show:hover {
   transform: scale(1.2);
   transition: transform 0.2s;
 }
 
-.back-to-top:not(.show) {
+.back-to-top-btn:not(.show) {
   animation: fadeOutAnimation 1s ease 0s 1 normal forwards;
 }
 
-.back-to-top:before {
+.back-to-top-btn:before {
   content: '';
   position: absolute;
   inset: 25%;
