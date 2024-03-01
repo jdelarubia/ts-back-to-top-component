@@ -1,6 +1,13 @@
 /**
  * back-to-top-btn.ts
  * <back-to-top-btn> button component.
+ * It reads the following parameters or chooses some defaults:
+ * - position ("top", "bottom" & "left", "right")
+ * - tag (destination tag)
+ * - color (primary color)
+ * - background (icon background color)
+ * - opacity (float percent)
+ *
  * define component in main:
  * window.customElements.define('back-to-top-btn', BackToTopBtn)
  */
