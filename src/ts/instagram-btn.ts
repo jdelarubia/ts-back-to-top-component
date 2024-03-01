@@ -13,8 +13,11 @@
 export class InstagramBtn extends HTMLElement {
   private targetUrl: string
   private template
+  // defaults
+  static TAG = 'top'
   static COLOR = '#9c6d01'
   static BACKGROUND = '#fff'
+  static OPACITY = 0.8
 
   constructor(targetUrl: string) {
     super()
@@ -27,7 +30,7 @@ export class InstagramBtn extends HTMLElement {
     this.appendChild(this.template.content.cloneNode(true))
     const tag = this.getAttribute('tag')
     const a = <HTMLAnchorElement>this.querySelector('a')
-    a.href = tag ? tag : this.targetUrl ? this.targetUrl : '#'
+    a.href = tag ? tag : this.targetUrl ? this.targetUrl : InstagramBtn.TAG
   }
 
   _getElementPosition(): string {
