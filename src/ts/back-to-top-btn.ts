@@ -46,6 +46,28 @@ export class BackToTopBtn extends HTMLElement {
       a.classList.toggle('show', (ev as CustomEvent).detail.showing)
     })
   }
+  _getElementPosition():string {
+    /**
+     * Return the element position as a string, or its defaults, "bottom right".
+     * Positioning is resolved via CSS.
+     */
+
+    const positionCss: Array<string> = []
+    const position = this.getAttribute('position')?.split(' ')
+
+    position?.forEach((style) => {
+      positionCss.push(style)
+    })
+    if (!positionCss.includes('top') && !positionCss.includes('bottom')) {
+      positionCss.push('bottom')
+    }
+    if (!positionCss.includes('right') && !positionCss.includes('left')) {
+      positionCss.push('right')
+    }
+
+    return positionCss.join(' ')
+  }
+  
 
   _template(targetId: string) {
     const svg = `<svg width="26" height="26" viewBox="0 0 6.879 6.879" xmlns="http://www.w3.org/2000/svg">
