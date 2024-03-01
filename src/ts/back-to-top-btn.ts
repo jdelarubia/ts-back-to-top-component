@@ -46,7 +46,8 @@ export class BackToTopBtn extends HTMLElement {
       a.classList.toggle('show', (ev as CustomEvent).detail.showing)
     })
   }
-  _getElementPosition():string {
+
+  _getElementPosition(): string {
     /**
      * Return the element position as a string, or its defaults, "bottom right".
      * Positioning is resolved via CSS.
