@@ -66,6 +66,15 @@ export class InstagramBtn extends HTMLElement {
     return [color ? color : InstagramBtn.COLOR, background ? background : InstagramBtn.BACKGROUND]
   }
 
+  _getComponentOpacity(): string {
+    /**
+     * Return the component opacity or its default value.
+     */
+
+    const opacity = this.getAttribute('opacity')
+    return opacity ? opacity : InstagramBtn.OPACITY.toString()
+  }
+
   _template(targetUrl: string) {
     /**
      * Return the web component to be rendered.
