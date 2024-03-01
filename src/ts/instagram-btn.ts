@@ -5,6 +5,7 @@
  * - position ("top", "bottom" & "left", "right")
  * - color (primary color)
  * - background (icon background color)
+ * - opacity (float percent)
  *
  * define component in main:
  * window.customElements.define('instagram-btn', InstagramBtn)
@@ -56,6 +57,10 @@ export class InstagramBtn extends HTMLElement {
   }
 
   _getElementColors(): Array<string> {
+    /**
+     * Return an array of color & background-color or its default values.
+     */
+
     const color = this.getAttribute('color')
     const background = this.getAttribute('background')
     return [color ? color : InstagramBtn.COLOR, background ? background : InstagramBtn.BACKGROUND]
