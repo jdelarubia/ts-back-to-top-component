@@ -78,6 +78,13 @@ export class BackToTopBtn extends HTMLElement {
     return [color ? color : BackToTopBtn.COLOR, background ? background : BackToTopBtn.BACKGROUND]
   }
   _getComponentOpacity(): string {
+    /**
+     * Return the component opacity or its default value.
+     */
+
+    const opacity = this.getAttribute('opacity')
+    return opacity ? opacity : BackToTopBtn.OPACITY.toString()
+  }
 
   _template(targetId: string) {
     const svg = `<svg width="26" height="26" viewBox="0 0 6.879 6.879" xmlns="http://www.w3.org/2000/svg">
