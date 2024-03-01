@@ -6,6 +6,24 @@
  * --btn-thumb-size
  */
 
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .instagram-btn {
   position: fixed;
   aspect-ratio: 1;
