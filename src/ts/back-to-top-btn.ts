@@ -28,6 +28,7 @@ export class BackToTopBtn extends HTMLElement {
   static COLOR = '#9c6d01'
   static BACKGROUND = '#fff'
   static OPACITY = 0.8
+  static STROKEWIDTH = 0.7
 
   constructor(targetId: string = BackToTopBtn.TAG) {
     super()
@@ -68,7 +69,7 @@ export class BackToTopBtn extends HTMLElement {
 
     return positionCss.join(' ')
   }
-  
+
   _getComponentColors(): Array<string> {
     /**
      * Return an array of color & background-color or its default values.
@@ -92,15 +93,16 @@ export class BackToTopBtn extends HTMLElement {
      * Return the web component to be rendered.
      */
 
+    const strokeWidth = BackToTopBtn.STROKEWIDTH
     const positionCss = this._getElementPosition()
     const opacity = this._getComponentOpacity()
     const [color, background] = this._getComponentColors()
     const svg = `<svg width="26" height="26" viewBox="0 0 6.879 6.879" xmlns="http://www.w3.org/2000/svg">
     <path 
     d="M6.35.259c.147 0 .265.118.265.264v5.821a.264.264 0 0 1-.265.265H.53a.264.264 0 0 1-.265-.265V.524c0-.147.118-.265.264-.265z" 
-    style="stroke:${color};fill:${background};fill-opacity:${opacity};fill-rule:evenodd;stroke-width:.7;stroke-linecap:round"/> 
+    style="stroke:${color};fill:${background};fill-opacity:${opacity};fill-rule:evenodd;stroke-width:${strokeWidth};stroke-linecap:round"/> 
     <path 
-    style="stroke:${color};fill:none;fill-rule:evenodd;fill-stroke-width:.8;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1" 
+    style="stroke:${color};fill:none;fill-rule:evenodd;fill-stroke-width:${strokeWidth};stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1" 
     d="m27.8 4.515 2.105-2.145 2.09 2.138" transform="translate(-26.458)"/>
     </svg>`
     const buttonCss = `<style>@import "./css/back-to-top-btn.css";</style>`
