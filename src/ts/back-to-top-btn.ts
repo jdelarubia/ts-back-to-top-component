@@ -87,15 +87,24 @@ export class BackToTopBtn extends HTMLElement {
   }
 
   _template(targetId: string) {
+    /**
+     * Return the web component to be rendered.
+     */
+
+    const positionCss = this._getElementPosition()
+    const opacity = this._getComponentOpacity()
+    const [color, background] = this._getComponentColors()
     const svg = `<svg width="26" height="26" viewBox="0 0 6.879 6.879" xmlns="http://www.w3.org/2000/svg">
-    <path style=";fill-rule:evenodd;stroke-width:.661781;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:12.6;stroke-dasharray:none" d="m26.452.5.019 4.309a.502.502 44.874 0 0 .502.5h4.262a.5.5 135 0 0 .5-.5V.523a.502.502 45.127 0 0-.5-.502L26.95.002a.496.496 135 0 0-.498.498z" transform="matrix(1.15717 0 0 1.15261 -30.226 .379)"/>
-    <path style="fill:none;fill-rule:evenodd;stroke-width:.79375;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1" d="m27.8 4.515 2.105-2.145 2.09 2.138" transform="translate(-26.458)"/>
+    <path 
+    d="M6.35.259c.147 0 .265.118.265.264v5.821a.264.264 0 0 1-.265.265H.53a.264.264 0 0 1-.265-.265V.524c0-.147.118-.265.264-.265z" 
+    style="stroke:${color};fill:${background};fill-opacity:${opacity};fill-rule:evenodd;stroke-width:.7;stroke-linecap:round"/> 
+    <path 
+    style="stroke:${color};fill:none;fill-rule:evenodd;fill-stroke-width:.8;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1" 
+    d="m27.8 4.515 2.105-2.145 2.09 2.138" transform="translate(-26.458)"/>
     </svg>`
     const buttonCss = `<style>@import "./css/back-to-top-btn.css";</style>`
-    return buttonCss + `<a href="${targetId}" class="back-to-top">${svg}</a>`
-  }
+    const html = `<a href="${targetId}" class="back-to-top-btn ${positionCss}">${svg}</a>`
 
-  static _defaultTag() {
-    return 'top'
+    return buttonCss + html
   }
 } //. BackToTopBtn
