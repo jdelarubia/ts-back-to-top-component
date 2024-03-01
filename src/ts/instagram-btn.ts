@@ -81,12 +81,13 @@ export class InstagramBtn extends HTMLElement {
      */
 
     const positionCss = this._getElementPosition()
+    const opacity = this._getComponentOpacity()
     const [color, background] = this._getElementColors()
     const svg = `<svg width="26" height="26" viewBox="0 0 6.879 6.879" xmlns="http://www.w3.org/2000/svg">
     <path d="M6.35.259c.147 0 .265.118.265.264v5.821a.264.264 0 0 1-.265.265H.53a.264.264 0 0 1-.265-.265V.524c0-.147.118-.265.264-.265z" 
-    style="stroke:${color};fill:${background};fill-rule:evenodd;stroke-width:.8;stroke-linecap:round"/> 
+    style="stroke:${color};fill:${background};fill-opacity:${opacity};fill-rule:evenodd;stroke-width:.8;stroke-linecap:round"/> 
     <g transform="translate(-34.925)">
-    <circle style="stroke:${color};fill:${background};fill-rule:evenodd;stroke-width:.8;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:12.6;stroke-dasharray:none;stroke-opacity:1" cx="38.365" cy="3.44" r="1.701"/>
+    <circle style="stroke:${color};fill:none;fill-rule:evenodd;stroke-width:.8;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:12.6;stroke-dasharray:none;stroke-opacity:1" cx="38.365" cy="3.44" r="1.701"/>
     <circle style="stroke:${color};fill:${color};fill-rule:evenodd;stroke-width:.113393;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:12.6;stroke-dasharray:none;stroke-opacity:1" cx="40.349" cy="1.455" r=".34"/>
     </g>
     </svg>`
